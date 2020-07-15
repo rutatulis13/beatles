@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Beatles</title>
+</head>
+<body id="shelf">
+	<div class="image" id="imagesimages">
+    </div>
+
+	<select id="themes" onChange="changeTheme()">
+  		<option value="img/john.jpg">John Lennon</option>
+  		<option value="img/paul.jpg">Paul McCartney</option>
+  		<option value="img/george.jpg">George Harrison</option>
+  		<option value="img/ringo.jpg">Ringo Star</option>
+	</select>
+	
+<style>
+    .image {
+        background: url(img/john.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 500px;
+        height: 500px;
+        }
+</style>
+
+<script>
+	
+	function changeTheme()
+{
+
+  const e = document.getElementById("themes");
+  const theme = e.options[e.selectedIndex].value;
+  console.log(theme);
+  document.getElementById("imagesimages").style.backgroundImage = "url("+theme+")";
+}  
+
+</script>
+</head>
+</body>    
+</html>
